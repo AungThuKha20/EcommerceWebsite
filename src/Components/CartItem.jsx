@@ -3,11 +3,11 @@ import { FaPlus } from "react-icons/fa";
 import { TiMinus } from "react-icons/ti";
 import { IoRemoveCircleSharp } from "react-icons/io5";
 import { CartContext } from "../Context/CartContext";
-import { Link } from "react-router-dom";
 
 const CartItem = (item) => {
   const { id } = item;
   const { increaseQty, removeCart, decreaseQty } = useContext(CartContext);
+
   return (
     <div className=" mx-2 flex justify-between my-4  ">
       <div>
@@ -15,12 +15,11 @@ const CartItem = (item) => {
       </div>
       <div className=" ">
         <p className="  w-[250px] text-center font-serif text-[16px]">
-          <Link to={`product/${id}`}>
-            <span className=" cursor-pointer underline hover:text-slate-100">
-              {" "}
-              {item.title.substring(0, 20)}..
-            </span>
-          </Link>
+          <span className=" cursor-pointer  hover:text-slate-100">
+            {" "}
+            {item.title.substring(0, 20)}..
+          </span>
+
           <span className=" ms-2 font-heading text-[18px]">${item.price}</span>
         </p>
         <div className=" flex justify-evenly">
