@@ -37,7 +37,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="foote shadow-md shadow-cyan-500 navbar_bg mt-10 py-1 text-white">
+    <div className="footer shadow-md shadow-cyan-500 navbar_bg mt-10 py-1 text-white">
       <div className="footer-content">
         <div className="footer-reviewss">
           <h3 className=" md:mt-6 mt-3 font-heading md:text-[50px] text-[25px] text-center">
@@ -81,7 +81,7 @@ const Footer = () => {
       <div className="footer-bottom text-center">
         <p>&copy; 2022 Your Ecommerce Store. All rights reserved.</p>
       </div>
-    </footer>
+    </div>
   );
 };
 

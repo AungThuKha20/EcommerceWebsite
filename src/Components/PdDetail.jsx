@@ -21,8 +21,8 @@ const PdDetail = () => {
   const autoplay = useRef(Autoplay({ delay: 2000 }));
 
   return (
-    <div className=" mt-[50px] mb-20  z-50">
-      <div className=" lg:flex-row flex flex-col md:mx-[100px] mx-[20px] items-center justify-center">
+    <div className=" mt-[50px] mb-20 h-full  ">
+      <div className=" lg:flex-row h-full flex flex-col md:mx-[100px] mx-[20px] items-center justify-center">
         <div className=" md:mx-[25px]">
           <Carousel
             withIndicators
@@ -48,39 +48,48 @@ const PdDetail = () => {
           </Carousel>
         </div>
         <div className=" flex-col justify-center items-center   md:mx-[25px] text-[10px] md:text-[20px] font-serif font-bold">
-          <p className=" md:mt-0 mt-5 text-center  font-heading text-[25px] md:text-[50px]">
-            {product.title}
-          </p>
-          <p className=" flex">
-            <p className=" w-[180px]">Brand </p>
-            <span className=" me-2">:</span>
-            {product.brand}
-          </p>
-          <p className=" flex">
-            <p className=" w-[180px]">Category </p>
-            <span className=" me-2">:</span>
-            {product.category}
-          </p>
-          <p className=" flex">
-            <p className=" w-[180px]">Price </p>
-            <span className=" me-2">:</span>${product.price}
-          </p>
-          <p className="flex">
-            <p className=" md:me-[58px] me-[89px]">Description</p>
-            <span className="me-2">:</span>
-            {product.description}
-          </p>
-          <p className=" flex w-full">
-            <p className=" w-[180px]">Discount_Rate </p>
-            <span className=" me-2">:</span>
-            {product.discountPercentage.toFixed(0)}%
-          </p>
-          <p className=" flex items-center">
-            <p className=" w-[180px]">Rating </p>
-            <span className=" me-2">:</span>
-            <Rating value={product.rating} fractions={2} readOnly />
-          </p>
-          <div className=" flex justify-center md:justify-evenly text-[10px] mt-3 ">
+          <table className="mx-auto mt-5 mb-10">
+            <tbody>
+              <tr>
+                <td>Title</td>
+                <td>:</td>
+                <td>{product.title}</td>
+              </tr>
+              <tr>
+                <td>Brand</td>
+                <td>:</td>
+                <td>{product.brand}</td>
+              </tr>
+              <tr>
+                <td>Category</td>
+                <td>:</td>
+                <td>{product.category}</td>
+              </tr>
+              <tr>
+                <td>Price</td>
+                <td>:</td>
+                <td>${product.price}</td>
+              </tr>
+              <tr>
+                <td className=" align-top">Description</td>
+                <td className=" align-top">:</td>
+                <td>{product.description}</td>
+              </tr>
+              <tr>
+                <td>Discount Rate</td>
+                <td>:</td>
+                <td>{product.discountPercentage.toFixed(0)}%</td>
+              </tr>
+              <tr>
+                <td>Rating</td>
+                <td>:</td>
+                <td>
+                  <Rating value={product.rating} fractions={2} readOnly />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div className=" flex justify-center gap-10 md:justify-evenly text-[18px] mt-3 ">
             <button
               onClick={() => addToCart(product, product.id)}
               className=" mx-2 hover:bg-gradient-to-l bg-gradient-to-r from-color-1 via-color-2 to-color-3 px-2 py-1 rounded-full "
