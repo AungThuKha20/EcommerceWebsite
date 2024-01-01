@@ -18,29 +18,28 @@ const Home = () => {
           <h1 className=" md:text-[60px] lg:text-[80px] text-[60px] font-heading">
             Best Collections
           </h1>
-          <h1 className=" text-start text-gray-400  text-[40px] font-heading font-bold">
+          <h1 className=" text-start text-gray-400  text-[30px] lg:text-[40px] font-heading font-bold">
             You Can Buy{""}
             <span className=" ms-1 bg-gradient-to-r from-color-1 via-color-2 to-color-3 bg-clip-text text-transparent">
               <TypeAnimation
                 className=" font-heading "
                 sequence={[
                   // Same substring at the start will only be typed out once, initially
-                  " Ropita",
+                  " SmartPhones",
                   1000, // wait 1s before replacing "Mice" with "Hamsters"
-                  "  Electronics",
+                  "  laptops",
                   1000,
-                  "  Furniture",
+                  "  Fragrances",
                   1000,
-                  "  Shoes",
+                  "  Skincare",
                   1000,
-                  "  Miscellaneous",
+                  "  Groceries",
                   1000,
-                  "  Perriots",
+                  "  Home-Decoration",
                   1000
                 ]}
                 wrapper="span"
                 speed={50}
-                style={{ fontSize: "40px" }}
                 repeat={Infinity}
               />
             </span>
