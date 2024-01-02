@@ -15,7 +15,7 @@ const Home = () => {
     <div>
       <div className=" flex items-center md:flex-row justify-center mt-8 flex-col-reverse mx-3 md:mx-20 lg:mx-[150px]">
         <div className=" md:w-3/5  mt-4    md:text-start text-center">
-          <h1 className=" md:text-[60px] lg:text-[80px] text-[60px] font-heading">
+          <h1 className=" md:text-[60px] lg:text-[80px] text-[60px] text-slate-300 font-heading">
             Best Collections
           </h1>
           <h1 className=" text-start text-gray-400  text-[30px] lg:text-[40px] font-heading font-bold">

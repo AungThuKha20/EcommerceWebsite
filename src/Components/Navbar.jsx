@@ -34,7 +34,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className=" z-40 md:container bg-slate-800 w-full mx-auto  ">
+    <div className=" z-40 md:container  w-full mx-auto  ">
       <div className="  text-white  lg:px-12 py-5 flex justify-around items-center ">
         <div className=" flex bg-gradient-to-r from-color-1 to-color-2  bg-clip-text text-transparent font-logo text-[25px] font-bold">
           PucciCat{" "}
@@ -135,7 +135,7 @@ const Navbar = () => {
           }  absolute z-10 top-16 left-20%`}
         >
           {" "}
-          <div className="  text-[10px]  bg-opacity-80 p-4 lg:hidden flex flex-col gap-2 items-start w-full mx-auto">
+          <div className="  text-[10px] bg-slate-800 bg-opacity-80 p-4 lg:hidden flex flex-col gap-2 items-start w-full mx-auto">
             <Link to={"/"}>
               <button className="font-serif border-b-[2px] border-cyan-100 font-bold hover:text-cyan-50 hover:scale-105 transition-all duration-200 text-cyan-100">
                 Home
