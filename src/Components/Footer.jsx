@@ -47,7 +47,7 @@ const Footer = () => {
             {reviews.map((review, index) => (
               <div
                 key={index}
-                className=" bg-gray-900 w-[300px] bg-opacity-30 p-4 review-item shadow-md shadow-cyan-600  "
+                className=" bg-gray-900 w-[300px] flex flex-col items-center bg-opacity-30 p-4 review-item shadow-md shadow-cyan-600  "
               >
                 <img
                   src={review.R_photo}
