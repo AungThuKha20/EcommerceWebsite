@@ -23,6 +23,7 @@ const Navbar = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleMenu = () => {
+    setSearch(false);
     return setMenu(!menu);
   };
   const handleSearchSubmit = (e) => {
@@ -30,6 +31,7 @@ const Navbar = () => {
     handleSearch(searchQuery);
   };
   const searchToggle = () => {
+    setMenu(false);
     return setSearch(!search);
   };
 
