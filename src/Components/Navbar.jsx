@@ -11,12 +11,14 @@ import { FaHome } from "react-icons/fa";
 import { HiSearchCircle } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import { ProductContext } from "../Context/ProductContext";
+import { RiMenuSearchLine } from "react-icons/ri";
 
 const Navbar = () => {
   const { handleClose } = useContext(SliderContext);
   const { itemAmount } = useContext(CartContext);
   const { handleCloseContact } = useContext(ContactContext);
   const [menu, setMenu] = useState(false);
+  const [search, setSearch] = useState(false);
   const { handleSearch } = useContext(ProductContext);
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -27,9 +29,12 @@ const Navbar = () => {
     e.preventDefault();
     handleSearch(searchQuery);
   };
+  const searchToggle = () => {
+    return setSearch(!search);
+  };
 
   return (
-    <div className=" z-40 md:container w-full mx-auto ">
+    <div className=" z-40 md:container bg-slate-800 w-full mx-auto  ">
       <div className="  text-white  lg:px-12 py-5 flex justify-around items-center ">
         <div className=" flex bg-gradient-to-r from-color-1 to-color-2  bg-clip-text text-transparent font-logo text-[25px] font-bold">
           PucciCat{" "}
@@ -91,15 +96,39 @@ const Navbar = () => {
             {itemAmount}
           </p>
         </div>
-
+        <button
+          onClick={searchToggle}
+          className=" group lg:hidden flex text-cyan-100 md:text-[22px] items-center gap-1"
+        >
+          <RiMenuSearchLine className=" group-hover:scale-110 text-[24px] md:text-[35px]" />
+        </button>
         <button
           onClick={handleMenu}
-          className=" group lg:hidden flex text-cyan-100 md:text-[25px] items-center gap-1"
+          className=" group lg:hidden flex text-cyan-100 md:text-[22px] items-center gap-1"
         >
           Menu
-          <BsFillMenuButtonWideFill className=" group-hover:scale-110 text-[25px] md:text-[40px]" />
+          <BsFillMenuButtonWideFill className=" group-hover:scale-110 text-[22px] md:text-[30px]" />
         </button>
         {/* menu for small devices */}
+        <div
+          className={` ${
+            !search ? "hidden" : "visible"
+          }  lg:hidden absolute top-20 flex items-center text-black`}
+        >
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="Search Your Products"
+            className=" px-6 ps-2 h-[40px]  bg-slate-300 rounded-md outline-none"
+          />
+          <button
+            onClick={handleSearchSubmit}
+            className="bg-slate-600 rounded-e-md h-[40px]  px-2 absolute  right-0 "
+          >
+            <HiSearchCircle size={30} />
+          </button>
+        </div>
         <div
           className={` ${
             !menu ? "hidden" : "visible"
@@ -124,22 +153,6 @@ const Navbar = () => {
                 </span>
               </div>
             </button>
-
-            <div className=" flex items-center text-black">
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search Your Products"
-                className=" px-4 ps-2 h-[30px]  bg-slate-300 rounded-md outline-none"
-              />
-              <button
-                onClick={handleSearchSubmit}
-                className="bg-slate-600 rounded-e-md h-[30px]  px-2 absolute  right-3"
-              >
-                <HiSearchCircle size={30} />
-              </button>
-            </div>
           </div>
         </div>
       </div>
