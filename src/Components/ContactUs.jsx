@@ -60,7 +60,7 @@ const ContactUs = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email.."
-              className=" p-2  bg-transparent border-2 border-t-orange-300 border-r-yellow-300 border-b-pink-300 border-l-sky-300 rounded-md  text-slate-300 focus:outline-none"
+              className=" p-2  bg-transparent border-2 border-t-emerald-900 border-r-cyan-800 border-b-teal-800 border-l-sky-800 rounded-md  text-slate-300 focus:outline-none"
             />
           </div>
           <div className=" flex flex-col  mb-4">
@@ -72,7 +72,7 @@ const ContactUs = () => {
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="Enter your name.."
-              className=" p-2  bg-transparent border-2 border-t-orange-300 border-r-yellow-300 border-b-pink-300 border-l-sky-300 rounded-md  text-slate-300 focus:outline-none"
+              className=" p-2  bg-transparent border-2 border-t-emerald-900 border-r-cyan-800 border-b-teal-800 border-l-sky-800 rounded-md  text-slate-300 focus:outline-none"
             />
           </div>
 
@@ -84,7 +84,7 @@ const ContactUs = () => {
               id=""
               value={content}
               onChange={(e) => setContent(e.target.value)}
-              className=" p-2 bg-transparent border-2 border-t-orange-300 border-r-yellow-300 border-b-pink-300 border-l-sky-300 rounded-md  text-slate-300 focus:outline-none"
+              className=" p-2 bg-transparent border-2 border-t-emerald-900 border-r-cyan-800 border-b-teal-800 border-l-sky-800 rounded-md  text-slate-300 focus:outline-none"
               cols="30"
               rows="5"
             ></textarea>

@@ -10,13 +10,12 @@ export default {
       },
       backgroundColor: {
         gradient: [
-          "background: #1D4350;\nbackground: -webkit-linear-gradient(to right, #A43931, #1D4350);\nbackground: linear-gradient(to right, #A43931, #1D4350);"
+          "background: #8360c3;  /* fallback for old browsers */\nbackground: -webkit-linear-gradient(to right, #2ebf91, #8360c3);  /* Chrome 10-25, Safari 5.1-6 */\nbackground: linear-gradient(to right, #2ebf91, #8360c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */"
         ]
       },
       gradientColorStops: {
-        "color-1": "#FEAC5E",
-        "color-2": "#C779D0",
-        "color-3": "#4BC0C8"
+        "color-1": "#8360c3",
+        "color-2": "#2ebf91"
       }
     }
   },

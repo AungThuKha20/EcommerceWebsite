@@ -28,11 +28,11 @@ const PayPal = () => {
         <p>Enter your email address to get started</p>
         <input
           type="text"
-          className=" bg-slate-600 rounded-md mt-3 outline-none border border-slate-900 px-4 py-1"
+          className=" bg-slate-600  text-slate-100 rounded-md mt-3 outline-none border border-slate-900 px-4 py-1"
           placeholder="Email or mobile number"
         />
         <a
-          className=" text-blue-950 font-serif text-[15px] mt-3 hover:underline"
+          className=" text-blue-950 font-serif text-[15px] mt-1  hover:underline"
           href=""
         >
           Forget Email?

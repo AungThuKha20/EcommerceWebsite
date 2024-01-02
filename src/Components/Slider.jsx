@@ -5,6 +5,7 @@ import { CartContext } from "../Context/CartContext";
 import CartItem from "./CartItem";
 import { CheckOutContext } from "../Context/CheckOutContext";
 import { PayPalContext } from "../Context/PaypalContext";
+import { Link } from "react-router-dom";
 
 const Slider = () => {
   const { isOpen, setIsOpen } = useContext(SliderContext);
@@ -42,19 +43,23 @@ const Slider = () => {
         </div>
 
         <div className=" flex justify-center gap-10 mt-2">
-          <button
-            onClick={handleClose}
-            className=" hover:bg-gray-800 text-white font-bold bg-gray-600 py-1 px-4 rounded-lg"
-          >
-            Check Out
-          </button>
-          <button
-            onClick={handleClosePP}
-            className=" italic hover:bg-gray-200 text-white font-bold bg-gray-100 py-1 px-4 rounded-lg"
-          >
-            <span className=" text-blue-700">Pay</span>
-            <span className=" text-sky-400">Pal</span>
-          </button>
+          <Link to={"/"}>
+            <button
+              onClick={handleClose}
+              className=" hover:bg-gray-800 text-white font-bold bg-gray-600 py-1 px-4 rounded-lg"
+            >
+              Check Out
+            </button>
+          </Link>
+          <Link to={"/"}>
+            <button
+              onClick={handleClosePP}
+              className=" italic hover:bg-gray-200 text-white font-bold bg-gray-100 py-1 px-4 rounded-lg"
+            >
+              <span className=" text-blue-700">Pay</span>
+              <span className=" text-sky-400">Pal</span>
+            </button>
+          </Link>
         </div>
         <div className=" mt-4 flex justify-center ">
           <button

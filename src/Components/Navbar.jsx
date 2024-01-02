@@ -31,7 +31,7 @@ const Navbar = () => {
   return (
     <div className=" z-40 md:container w-full mx-auto ">
       <div className="  text-white  lg:px-12 py-5 flex justify-around items-center ">
-        <div className=" flex bg-gradient-to-r from-color-1 via-color-2 to-color-3 bg-clip-text text-transparent font-logo text-[25px] font-bold">
+        <div className=" flex bg-gradient-to-r from-color-1 to-color-2  bg-clip-text text-transparent font-logo text-[25px] font-bold">
           PucciCat{" "}
           <span>
             <GiSaberToothedCatHead size={30} className=" text-sky-700" />
@@ -84,7 +84,7 @@ const Navbar = () => {
 
         <div
           onClick={handleClose}
-          className=" lg:ms-0 ms-[150px] relative cursor-pointer flex items-center text-[25px] md:text-[40px]  hover:scale-105 transition-all duration-200"
+          className=" lg:ms-0 ms-[130px] relative cursor-pointer flex items-center text-[25px] md:text-[40px]  hover:scale-105 transition-all duration-200"
         >
           <MdShoppingCart className=" absolute z-[1] text-cyan-100" />
           <p className=" absolute rounded-full top-[-26px] left-[13px] md:left-[23px] md:top-[-30px] text-[14px] bg-cyan-50 text-cyan-950 font-bold md:px-[4px] px-[2px]   text-center">
@@ -125,24 +125,21 @@ const Navbar = () => {
               </div>
             </button>
 
-            <form
-              onSubmit={handleSearchSubmit}
-              className=" flex items-center text-black"
-            >
+            <div className=" flex items-center text-black">
               <input
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search Your Products"
-                className=" px-4 ps-2 py-1  bg-slate-300 rounded-md outline-none"
+                className=" px-4 ps-2 h-[30px]  bg-slate-300 rounded-md outline-none"
               />
               <button
-                type="submit"
-                className="bg-slate-600 rounded-e-md py-[1px] px-2 absolute  right-3"
+                onClick={handleSearchSubmit}
+                className="bg-slate-600 rounded-e-md h-[30px]  px-2 absolute  right-3"
               >
                 <HiSearchCircle size={30} />
               </button>
-            </form>
+            </div>
           </div>
         </div>
       </div>

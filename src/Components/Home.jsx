@@ -20,7 +20,7 @@ const Home = () => {
           </h1>
           <h1 className=" text-start text-gray-400  text-[30px] lg:text-[40px] font-heading font-bold">
             You Can Buy{""}
-            <span className=" ms-1 bg-gradient-to-r from-color-1 via-color-2 to-color-3 bg-clip-text text-transparent">
+            <span className=" ms-1 bg-gradient-to-r from-color-1 to-color-2  bg-clip-text text-transparent">
               <TypeAnimation
                 className=" font-heading "
                 sequence={[
@@ -55,7 +55,7 @@ const Home = () => {
           </p>
           <button
             onClick={toggleProducts}
-            className="mt-4 hover:bg-gradient-to-l font-serif text-[15px] md:text-[20px] font-bold w-[350px] h-[50px] rounded-full flex flex-row justify-center items-center bg-gradient-to-r from-color-1 via-color-2 to-color-3"
+            className="mt-4 hover:bg-gradient-to-l font-serif text-[15px] md:text-[20px] font-bold w-[350px] h-[50px] rounded-full flex flex-row justify-center items-center bg-gradient-to-r from-color-1 to-color-2 "
           >
             {showDiscountedProducts ? (
               <>
@@ -75,7 +75,7 @@ const Home = () => {
           </button>
         </div>
 
-        <img src={model} className="w-3/4 md:w-2/5  " alt="" />
+        <img src={model} className="w-3/4 md:w-2/5   " alt="" />
       </div>
       <div className="  mx-2  mt-10 flex flex-wrap justify-center gap-10 ">
         {products?.map((pd) => {

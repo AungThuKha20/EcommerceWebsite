@@ -23,7 +23,7 @@ const PdDetail = () => {
   return (
     <div className=" mt-[50px] mb-20 h-full  ">
       <div className=" lg:flex-row h-full flex flex-col md:mx-[100px] mx-[20px] items-center justify-center">
-        <div className=" md:mx-[25px]">
+        <div className=" md:mx-[25px] flex justify-center items-center">
           <Carousel
             withIndicators
             // height={200}
@@ -37,7 +37,7 @@ const PdDetail = () => {
                 <Carousel.Slide key={image}>
                   <img
                     src={image}
-                    className=" object-fill w-[350px] h-[230px]  md:w-[400px] md:h-[280px]"
+                    className=" object-cover w-[350px] h-[230px]  md:w-[400px] md:h-[300px]"
                     alt=""
                   />
                 </Carousel.Slide>
@@ -47,7 +47,7 @@ const PdDetail = () => {
             {/* ...other slides */}
           </Carousel>
         </div>
-        <div className=" flex-col justify-center items-center   md:mx-[25px] text-[10px] md:text-[20px] font-serif font-bold">
+        <div className=" flex-col justify-center items-center text-slate-50   md:mx-[25px] text-[15px] md:text-[20px] font-serif font-semibold">
           <table className="mx-auto mt-5 mb-10">
             <tbody>
               <tr>
@@ -77,8 +77,10 @@ const PdDetail = () => {
               </tr>
               <tr>
                 <td>Discount Rate</td>
-                <td>:</td>
-                <td>{product.discountPercentage.toFixed(0)}%</td>
+                <td className=" align-top">:</td>
+                <td className=" align-top">
+                  {product.discountPercentage.toFixed(0)}%
+                </td>
               </tr>
               <tr>
                 <td>Rating</td>
@@ -92,12 +94,12 @@ const PdDetail = () => {
           <div className=" flex justify-center gap-10 md:justify-evenly text-[18px] mt-3 ">
             <button
               onClick={() => addToCart(product, product.id)}
-              className=" mx-2 hover:bg-gradient-to-l bg-gradient-to-r from-color-1 via-color-2 to-color-3 px-2 py-1 rounded-full "
+              className=" mx-4 hover:bg-gradient-to-l bg-gradient-to-r from-color-1 to-color-2  px-4 py-1 rounded-md "
             >
               Add To Cart
             </button>
             <Link to="/">
-              <button className=" mx-2 hover:bg-gradient-to-l bg-gradient-to-r from-color-1 via-color-2 to-color-3 px-2 py-1 rounded-full">
+              <button className=" mx-4 hover:bg-gradient-to-l bg-gradient-to-r from-color-1 to-color-2  px-4 py-1 rounded-md">
                 Back To Home
               </button>
             </Link>

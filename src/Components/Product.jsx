@@ -26,21 +26,21 @@ const Product = (pd) => {
     <div className=" animate__animated animate__flipInX   relative group w-[350px] shadow-lg px-2 shadow-cyan-500  ">
       <img src={thumbnail} className="  h-[150px]" alt="" />
       <div className=" mx-2 mt-4 flex justify-between">
-        <p className=" bg-gradient-to-l from-color-2 via-color-1 to-color-3 font-serif px-2 py-1 rounded-md font-extrabold text-[14px]">
+        <p className=" bg-gradient-to-l from-color-2 to-color-1  font-serif px-2 py-1 rounded-md font-extrabold text-[14px]">
           {category}
         </p>
-        <p className=" bg-gradient-to-l from-color-2 via-color-1 to-color-3 font-serif px-2 py-1 rounded-md font-extrabold text-[14px]">
+        <p className=" bg-gradient-to-l from-color-2 to-color-1 to-color-3 font-serif px-2 py-1 rounded-md font-extrabold text-[14px]">
           {brand.substring(0, 20)}
         </p>
       </div>
       <div className=" m-2 flex justify-between">
-        <p className=" font-para capitalize text-[18px] font-bold">
-          {title.substring(0, 20)}
+        <p className=" font-para text-slate-200 capitalize text-[18px] font-bold">
+          {title.substring(0, 25)}
         </p>
         <Rating value={rating} fractions={2} readOnly />
       </div>
       <div className=" mb-4 m-2 flex items-center  justify-between">
-        <p className=" font-logo font-extrabold text-[25px]">
+        <p className=" font-logo text-slate-200 font-bold text-[25px]">
           ${price}{" "}
           <span className=" ms-2 line-through">
             ${price + price * (discountPercentage / 100).toFixed(1)}

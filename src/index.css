@@ -6,19 +6,14 @@
 
 body{
   background: #2b5876;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #6d5ea5, #2b5876);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #4e4376, #2b5876); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to right, #33275e, #183346);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #312753, #152e3f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .navbar_bg{
-  background: #4d92c0;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #706988, #476c85);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #423769, #2a475a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #1a394e;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2f1b66, #133146);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #332c4d, #223c4d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   
-}
-.slider_bg{
-  background: #1b5983;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #7f6ac9, #2e6991);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #594d86, #275879); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 
