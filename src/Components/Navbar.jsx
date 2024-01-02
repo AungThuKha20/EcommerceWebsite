@@ -89,7 +89,7 @@ const Navbar = () => {
 
         <div
           onClick={handleClose}
-          className=" lg:ms-0 ms-[130px] me-3 relative cursor-pointer flex items-center text-[25px] md:text-[40px]  hover:scale-105 transition-all duration-200"
+          className=" lg:ms-0 ms-[130px] me-5 relative cursor-pointer flex items-center text-[25px] md:text-[40px]  hover:scale-105 transition-all duration-200"
         >
           <MdShoppingCart className=" absolute z-[1] text-cyan-100" />
           <p className=" absolute rounded-full top-[-26px] left-[13px] md:left-[23px] md:top-[-30px] text-[14px] bg-cyan-50 text-cyan-950 font-bold md:px-[4px] px-[2px]   text-center">
