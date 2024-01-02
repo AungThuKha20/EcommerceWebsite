@@ -23,7 +23,7 @@ const Product = (pd) => {
     discountPercentage
   } = pd;
   return (
-    <div className=" animate__animated animate__flipInX   relative group w-[350px] shadow-lg px-2 shadow-cyan-500  ">
+    <div className=" animate__animated animate__flipInX   relative group w-[350px] shadow-md px-2 shadow-cyan-500  ">
       <img src={thumbnail} className="  h-[150px]" alt="" />
       <div className=" mx-2 mt-4 flex justify-between">
         <p className=" bg-gradient-to-l from-color-2 to-color-1  font-serif px-2 py-1 rounded-md font-extrabold text-[14px]">
