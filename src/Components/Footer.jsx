@@ -43,11 +43,11 @@ const Footer = () => {
           <h3 className=" md:mt-6 mt-3 font-heading md:text-[50px] text-[25px] text-center">
             Customer Reviews
           </h3>
-          <div className="review-list flex flex-wrap justify-center mx-3 gap-5">
+          <div className="review-list  flex flex-wrap justify-center mx-3 gap-10">
             {reviews.map((review, index) => (
               <div
                 key={index}
-                className=" bg-gray-900 bg-opacity-30 p-4 review-item shadow-md shadow-cyan-600  "
+                className=" bg-gray-900 w-[300px] bg-opacity-30 p-4 review-item shadow-md shadow-cyan-600  "
               >
                 <img
                   src={review.R_photo}
